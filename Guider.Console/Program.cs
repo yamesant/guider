@@ -1,5 +1,5 @@
 ﻿using TextCopy;
 
 Guid guid = Guid.NewGuid();
-Console.WriteLine($"Here is the GUID: {guid}");
+Console.WriteLine(guid);
 ClipboardService.SetText(guid.ToString());
