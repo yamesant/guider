@@ -10,6 +10,7 @@
         <PackageOutputPath>./packages</PackageOutputPath>
         <PackageId>Guider</PackageId>
         <Version>1.1.0</Version>
+        <IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
     </PropertyGroup>
 
     <ItemGroup>
