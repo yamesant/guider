@@ -1,5 +1,14 @@
 ﻿using TextCopy;
+using System.CommandLine;
 
-Guid guid = Guid.NewGuid();
-Console.WriteLine(guid);
-ClipboardService.SetText(guid.ToString());
+RootCommand rootCommand = new("Generate a GUID and copy it to the clipboard");
+rootCommand.Name = "guidgen";
+rootCommand.SetHandler(GenerateGuid);
+return await rootCommand.InvokeAsync(args);
+
+void GenerateGuid()
+{
+    Guid guid = Guid.NewGuid();
+    Console.WriteLine(guid);
+    ClipboardService.SetText(guid.ToString());
+}
